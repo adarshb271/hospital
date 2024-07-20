@@ -1,0 +1,9 @@
+const express = require('express');
+const upload = require('../middlewares/upload');
+const router = express.Router();
+
+const controller = require('../controllers/hospital-controllers');
+
+router.get('/', controller.getHospital);
+router.post('/', upload.single(' image'), controller.postHospital);
+module.exports = router;

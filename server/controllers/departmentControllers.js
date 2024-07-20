@@ -1,5 +1,4 @@
 const Department = require('../db/models/department-schema');
-// const Department = require('../db/models/department-schema');
 
 module.exports.getDepartments = async (req, res) => {
   const departments = await Department.find();
